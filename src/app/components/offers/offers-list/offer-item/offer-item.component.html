@@ -1,0 +1,22 @@
+<tr *ngIf="offer">
+  <td>{{offer.id}}</td>
+  <td>{{offer.name}}</td>
+  <td>{{offer.depart}}</td>
+  <td>{{offer.arrive}}</td>
+  <td>{{offer.prop}}</td>
+  <td>{{offer.date}}</td>
+  <td>{{offer.type}}</td>
+  <td>{{offer.selected}}</td>
+
+  <td>
+    <button (click)="onEdit(offer) "class="btn btn-success">
+      <i class="fa fa-edit"> Modifier</i>
+    </button>
+    <button (click)="onDelete(offer) "class="btn btn-danger">
+      <i class="fa fa-trash-o"> Supprimer</i>
+    </button>
+
+  </td>
+</tr>
+
+

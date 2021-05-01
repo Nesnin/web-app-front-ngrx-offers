@@ -1,0 +1,13 @@
+<table class="table" *ngIf="state">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>ville depart</th>
+    <th>ville d'arrivé</th>
+    <th>Proposé par</th>
+    <th>date</th>
+    <th>type</th>
+    <th>Selectionné</th>
+  </tr>
+  <app-Offer-item *ngFor="let Offer of state.Offers" [offer]="Offer" style="display: contents"></app-Offer-item>
+</table>

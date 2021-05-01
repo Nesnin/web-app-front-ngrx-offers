@@ -1,0 +1,54 @@
+{
+  "offers": [
+    {
+      "id": 1,
+      "name": "testtest",
+      "depart": "Alger",
+      "arrive": "tipaza",
+      "prop": "mohamed ali",
+      "date": "2021-05-09",
+      "type": "train",
+      "selected": false
+    },
+    {
+      "id": 12,
+      "name": "Test11",
+      "depart": "kdkqjd",
+      "arrive": "jhsdjksqhd",
+      "prop": "jjdqsd",
+      "date": "2021-04-05",
+      "type": "taxi",
+      "selected": true
+    },
+    {
+      "id": 13,
+      "name": "name",
+      "depart": "alger",
+      "arrive": "alger",
+      "prop": "auteur",
+      "date": "2021-04-14",
+      "type": "bus",
+      "selected": false
+    },
+    {
+      "name": "testfinal",
+      "depart": "alger",
+      "arrive": "alger",
+      "prop": "auteur",
+      "date": "2021-04-18",
+      "type": "bus",
+      "selected": true,
+      "id": 14
+    },
+    {
+      "name": "name",
+      "depart": "alger",
+      "arrive": "alger",
+      "prop": "auteur",
+      "date": "2021-05-06",
+      "type": "taxi",
+      "selected": true,
+      "id": 16
+    }
+  ]
+}

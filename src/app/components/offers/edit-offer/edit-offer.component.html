@@ -1,0 +1,64 @@
+<div class="container">
+    <ng-container *ngIf="state as data">
+      <ng-container *ngIf="data.dataState==statEnum.LOADING">
+        Loading...
+      </ng-container>
+
+      <ng-container *ngIf="data.dataState==statEnum.ERROR">
+        {{state.errorMessage}}
+      </ng-container>
+
+      <ng-container *ngIf="data.dataState==statEnum.UPDATED">
+        <div class="alert-success container p-3 m-3">
+          <span>Offre Modifier</span>
+          <button class="btn btn-success ml-3" (click)="okupd()">
+            Ok
+          </button>
+
+        </div>
+
+      </ng-container>
+
+
+      <ng-container *ngIf="data.dataState==statEnum.LOADED">
+      <ng-container *ngIf="formbuilt">
+        <form [formGroup]="offerFormGroup" (ngSubmit)="onUpdateOffer()">
+          <div>
+            <input type="text" class="form-control" formControlName="name" id="name"
+                   [ngClass]="{ 'is-invalid':submitted && offerFormGroup.controls.name.errors}">
+            <div *ngIf="submitted && offerFormGroup.controls.name.errors" class="invalid-feedback">
+              <div *ngIf="offerFormGroup.controls.name.errors.required">Le nom est obligatoire</div>
+            </div>
+            </div>
+          <div class="form-group">
+            <label for="depart">ville de depart</label>
+            <input type="text" class="form-control" formControlName="depart" id="depart">
+          </div>
+          <div class="form-group">
+            <label for="arrive">ville d'arrive</label>
+            <input type="text" class="form-control" formControlName="arrive" id="arrive">
+          </div>
+          <div class="form-group">
+            <label for="prop">propose par</label>
+            <input type="text" class="form-control" formControlName="prop" id="prop">
+          </div>
+          <div class="form-group">
+            <label for="type">type</label>
+            <input type="text" class="form-control" formControlName="type" id="type">
+          </div>
+          <div class="form-group">
+            <label for="date">date</label>
+            <input type="date" class="form-control" formControlName="date" id="date">
+          </div>
+          <div class="form-group">
+            <label for="selected">Selectionné</label>
+            <input type="checkbox" class="form-check" formControlName="selected" id="selected">
+          </div>
+          <button type="submit" class="btn btn-success">modifier</button>
+
+        </form>
+
+      </ng-container>
+      </ng-container>
+    </ng-container>
+</div>
